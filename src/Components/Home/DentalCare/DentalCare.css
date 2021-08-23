@@ -1,0 +1,17 @@
+.dentalCare-button{
+    background-image: linear-gradient(
+    to right,
+    rgb(9, 141, 173),
+    rgb(6, 187, 211)
+  );
+  border: none;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  color: white;
+}
+
+.dentalCare-button:hover{
+    background-image: linear-gradient(to left,rgb(11, 153, 189),
+    rgb(3, 127, 143))
+}

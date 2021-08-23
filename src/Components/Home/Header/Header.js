@@ -9,6 +9,7 @@ const Header = () => {
             <Navbar></Navbar>
             <HeaderMain></HeaderMain>
             <BusinessInfo></BusinessInfo>
+            
         </div>
     );
 };
