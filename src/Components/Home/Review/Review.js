@@ -4,7 +4,7 @@ import "./Review.css";
 const Review = ({ review }) => {
   return (
     <div className="col-md-4 ">
-      <div className="card card-body">
+      <div className="card card-body-style">
         <p className="text-center ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veniam
           cumque, cupiditate facilis in nesciunt sequi eos maxime modi fugit.
