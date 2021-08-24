@@ -12,7 +12,7 @@ const DentalCare = () => {
                 <div className="col-lg-7">
                     <h1>Exceptional Dental <br/> Care, On Your Terms</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, sapiente! Illum consectetur, quas blanditiis laudantium eius unde nesciunt, ducimus voluptate nemo fugit eaque laboriosam atque, a facilis voluptatem incidunt? Quas.</p>
-                    <button className="dentalCare-button">Learn More</button>
+                    <button className="info-button">Learn More</button>
                 </div>
             </div>
         </section>

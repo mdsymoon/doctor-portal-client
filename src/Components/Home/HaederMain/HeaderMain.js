@@ -1,5 +1,6 @@
 import React from 'react';
-import chair from '../../../images/chair.png'
+import chair from '../../../images/chair.png';
+import './HeaderMain.css';
 
 const HeaderMain = () => {
     return (
