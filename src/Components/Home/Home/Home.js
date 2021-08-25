@@ -7,6 +7,7 @@ import Testimonial from './../Testimonial/Testimonial';
 import Blogs from './../Blogs/Blogs';
 import Doctors from './../Doctors/Doctors';
 import ContactUs from './../ContactUs/ContactUs';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <Blogs></Blogs>
             <Doctors></Doctors>
             <ContactUs></ContactUs>
+            <Footer></Footer>
         </div>
     );
 };
