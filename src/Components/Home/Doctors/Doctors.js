@@ -8,17 +8,17 @@ import DoctorsCard from './../DoctorsCard/DoctorsCard';
 const doctors =[
     {
         img: dr1,
-        name:"Dr.Stephen",
+        name:"Dr. Stephen",
         phone: "+61 434 432 234"
     },
     {
         img: dr2,
-        name: "Dr.Jordan",
+        name: "Dr. Jordan",
         phone: "+61 434 432 234"
     },
     {
         img: dr3,
-        name: "Dr.Robben",
+        name: "Dr. Melinda",
         phone: "+61 434 432 234"
     }
 ]

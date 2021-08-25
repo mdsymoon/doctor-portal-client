@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderMain from '../HaederMain/HeaderMain';
-import Navbar from '../NavbarPage/NavbarPage';
+import Navbar from '../../Shared/NavbarPage/NavbarPage';
 import './Header.css'
 import BusinessInfo from './../BusinessInfo/BusinessInfo';
 const Header = () => {
