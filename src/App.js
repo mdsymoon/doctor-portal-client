@@ -8,6 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import Appointment from './Components/Appointment/Appointment/Appointment';
+import Login from './Components/LoginPage/Login/Login';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route  path="/appointment">
           <Appointment></Appointment>
+        </Route>
+        <Route  path="/login">
+          <Login></Login>
         </Route>
       </Switch>
     </Router>
