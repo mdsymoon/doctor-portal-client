@@ -9,22 +9,34 @@ import {
 } from "react-router-dom";
 import Appointment from './Components/Appointment/Appointment/Appointment';
 import Login from './Components/LoginPage/Login/Login';
+import { createContext } from 'react';
+import { useState } from 'react';
+import PrivateRoute from './Components/LoginPage/PrivateRoute/PrivateRoute';
+import DashboardPage from './Components/Dashboard/DashboardPage/DashboardPage';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser , setLoggedInUser] = useState({});
   return (
+    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
     <Router>
       <Switch>
         <Route exact path="/">
           <Home></Home>
         </Route>
-        <Route  path="/appointment">
+        <PrivateRoute  path="/appointment">
           <Appointment></Appointment>
-        </Route>
+        </PrivateRoute>
+        <PrivateRoute  path="/dashboard">
+          <DashboardPage></DashboardPage>
+        </PrivateRoute>
         <Route  path="/login">
           <Login></Login>
         </Route>
       </Switch>
     </Router>
+    </UserContext.Provider>
   );
 }
 

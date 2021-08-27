@@ -53,7 +53,7 @@ const BookAppointment = ({date}) => {
            <h2 className="text-center text-brand" >Available Appointment on {date.toDateString()}</h2>
            <div className="row">
                {
-                   bookingData.map(booking => <BookAppointmentCard booking={booking} key={booking.id}></BookAppointmentCard>)
+                   bookingData.map(booking => <BookAppointmentCard booking={booking} key={booking.id} date={date}></BookAppointmentCard>)
                }
            </div>
        </section>

@@ -1,34 +1,47 @@
-import React from 'react';
-import loginpageimg from '../../../images/Group 140.png';
+import React, { useContext } from "react";
+import loginpageimg from "../../../images/Group 140.png";
 import firebase from "firebase/app";
 import "firebase/auth";
-import firebaseConfig from './firebase.config';
+import firebaseConfig from "./firebase.config";
+import { useHistory, useLocation } from "react-router-dom";
+import { UserContext } from './../../../App';
 
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
+  const history = useHistory();
+  const location = useLocation();
+  const { from } = location.state || { from: { pathname: "/" } };
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  
+  const googleLogIn = () => {
     var provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        const {email} = result.user;
+        const signedInUser = {email}
+        setLoggedInUser(signedInUser);
+        
+        history.replace(from);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+  };
 
-    const googleLogIn = () => {
-        firebase.auth()
-  .signInWithPopup(provider)
-  .then((result) => {
-    console.log(result);
-  }).catch((error) => {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-    }
+  
 
-    return (
-       
-             <div className="container">
+  return (
+    <div className="container">
       <div className="row align-items-center container-fluid">
         <div className="col-lg-5 my-5">
           <div className="card card-body">
@@ -45,7 +58,7 @@ const Login = () => {
               className="form-control mb-5"
               placeholder="Your Password"
             />
-            <button type="submit" className="info-button" onClick={googleLogIn} >
+            <button type="submit" className="info-button" onClick={googleLogIn}>
               Google LogIn
             </button>
           </div>
@@ -55,8 +68,7 @@ const Login = () => {
         </div>
       </div>
     </div>
-        
-    );
+  );
 };
 
 export default Login;

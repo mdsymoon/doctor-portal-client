@@ -15,9 +15,9 @@ const NavbarPage = () => {
           <Link to="/appointment" className="navbar-text">
             Appointment
           </Link>
-          <Nav.Link href="#link" className="navbar-text">
-            Dental Services
-          </Nav.Link>
+          <Link to="/dashboard" className="navbar-text">
+            Dashboard
+          </Link>
           <Nav.Link href="#link" className="navbar-text">
             Reviews
           </Nav.Link>
