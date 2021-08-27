@@ -15,11 +15,11 @@ const AppointmentByDate = ({appointment}) => {
           </thead>
           <tbody>
             {
-              appointment.map((appointment, idx) =>
-                <tr key={idx}>
-                  <td>{appointment.username}</td>
-                  <td>{appointment.phone}</td>
-                  <td>{appointment.email}</td>
+              appointment.map((appointments) =>
+                <tr key={appointments._id}>
+                  <td>{appointments.username}</td>
+                  <td>{appointments.phone}</td>
+                  <td>{appointments.email}</td>
                 </tr>)
             }
           </tbody>

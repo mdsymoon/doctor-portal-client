@@ -5,11 +5,9 @@ import { useState } from 'react';
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import { useEffect } from 'react';
+import './DashboardPage.css';
 
-const containerStyle = {
-    backgroundColor: '#F4FDFB',
-    height: '100%',
-}
+
 
 const DashboardPage = () => {
     const [selectedDate , setSelectedDate] = useState(new Date()); 
@@ -31,11 +29,11 @@ const DashboardPage = () => {
     },[selectedDate])
     return (
         <section>
-            <div style={containerStyle} className="container-fluid row">
-                <div className="col-md-2">
+            <div  className="container-fluid row containerStyle py-5">
+                <div className="col-md-2 pb-5">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-5 ">
                 <Calendar onChange={handleDateChange} value={new Date()} />
                 </div>
                 <div className="col-md-5">

@@ -15,13 +15,13 @@ const Sidebar = () => {
         <Link className="dashboard-link-text" to="/">
           <AiTwotoneHome/> Home
         </Link>
-        <Link className="dashboard-link-text" to="/dashboard/patients">
+        <Link className="dashboard-link-text" to="/patients">
           <BsPeopleFill/> Patients
         </Link>
         <Link className="dashboard-link-text" to="/dashboard">
           <MdDashboard/> DashBoard
         </Link>
-        <Link className="dashboard-link-text" to="/dashboard/appointments">
+        <Link className="dashboard-link-text" to="/appointments">
           <BiClipboard/> Appointments
         </Link>
         <Link className="dashboard-link-text" to="/dashboard/addDoctor">
