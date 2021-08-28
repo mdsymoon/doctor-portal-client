@@ -24,7 +24,7 @@ const Sidebar = () => {
         <Link className="dashboard-link-text" to="/appointments">
           <BiClipboard/> Appointments
         </Link>
-        <Link className="dashboard-link-text" to="/dashboard/addDoctor">
+        <Link className="dashboard-link-text" to="addDoctor">
           <HiOutlineViewGridAdd /> Add Doctor
         </Link>
       </div>      

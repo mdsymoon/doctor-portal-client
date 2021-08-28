@@ -4,7 +4,9 @@ const AppointmentByDate = ({appointment}) => {
     return (
         <div>
       <h1 style={{fontSize:'40px'}}  className="info-text  pb-4">Appointments : {appointment.length}</h1>
-      <div className="table-responsive">
+      {
+        appointment.length?
+        <div className="table-responsive">
         <table style={{width: '600px'}} className="table">
           <thead>
             <tr>
@@ -25,6 +27,11 @@ const AppointmentByDate = ({appointment}) => {
           </tbody>
         </table>
       </div>
+      :
+      <div className="py-5">
+        <h4 className="text-danger">No Appointments for this Date.</h4>
+      </div>
+      }
     </div>
     );
 };
