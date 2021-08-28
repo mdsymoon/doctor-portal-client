@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const NavbarPage = () => {
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" className="m-3">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">

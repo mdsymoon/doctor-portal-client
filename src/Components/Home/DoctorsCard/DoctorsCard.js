@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const DoctorsCard = ({doctor}) => {
     
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 col-sm-6 ">
             <div className="card card-body " style={{border: 'none'}}>
                 <img className="w-80" src={`data:image/png;base64,${doctor.image.img}`} alt=""/>
                 <h5 className="text-center mt-2">{doctor.name}</h5>

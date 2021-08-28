@@ -27,7 +27,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
     data.date = date.toDateString();
     data.created = new Date().toDateString();
 
-    fetch(`http://localhost:4000/addAppointment`, {
+    fetch(`https://hidden-harbor-95982.herokuapp.com/addAppointment`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

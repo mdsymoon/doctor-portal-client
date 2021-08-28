@@ -11,24 +11,24 @@ const AddDoctor = () => {
     setInfo(newInfo);
   };
 
-  const handleSubmit =() => {
-    const formData = new FormData()
-    formData.append('file', file);
-    formData.append('name', info.name);
-    formData.append('email', info.email);
-  
-    fetch('http://localhost:4000/addDoctor', {
-      method: 'POST',
-      body: formData
+  const handleSubmit = () => {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("name", info.name);
+    formData.append("email", info.email);
+
+    fetch("https://hidden-harbor-95982.herokuapp.com/addDoctor", {
+      method: "POST",
+      body: formData,
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-    })
-    .catch(error => {
-      console.error(error)
-    })
-  }
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   const handleFileChange = (e) => {
     const newFile = e.target.files[0];
