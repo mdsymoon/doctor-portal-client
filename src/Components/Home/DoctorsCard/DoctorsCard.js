@@ -1,6 +1,6 @@
 import React from 'react';
 import {AiOutlineMail} from "react-icons/ai";
-import { useState, useEffect } from 'react';
+
 
 const DoctorsCard = ({doctor}) => {
     

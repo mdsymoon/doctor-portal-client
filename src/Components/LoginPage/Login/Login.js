@@ -23,7 +23,7 @@ const Login = () => {
         const {email} = result.user;
         const signedInUser = {email}
         setLoggedInUser(signedInUser);
-        
+        console.log(loggedInUser);
         history.replace(from);
       })
       .catch((error) => {

@@ -1,8 +1,5 @@
 import React from "react";
 import "./Doctors.css";
-import dr1 from "../../../images/doctor1.jpg";
-import dr2 from "../../../images/doctor2.jpg";
-import dr3 from "../../../images/doctor 3.jpg";
 import DoctorsCard from "./../DoctorsCard/DoctorsCard";
 import { useState, useEffect } from "react";
 
